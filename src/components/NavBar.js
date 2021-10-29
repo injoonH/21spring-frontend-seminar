@@ -16,6 +16,9 @@ const NavBar = () =>
     <Link to="/dog-sns">
       SNS
     </Link>
+    <Link to="/hello">
+      Hello
+    </Link>
   </div>
 
 export default NavBar;

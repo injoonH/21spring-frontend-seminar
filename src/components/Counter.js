@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Counter.css';
 
 const Counter = () => {
+  const [count, setCount] = useState(0);
   return (
     <div className='counter'>
-      <button>-</button>
-      <div>0</div>
-      <button>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+      <div>{count}</div>
+      <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   )
 }

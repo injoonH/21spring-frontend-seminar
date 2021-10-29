@@ -1,7 +1,10 @@
 import React from 'react'
 
 const HelloComponent = () => {
-  return <div>Hello</div>;
+  const onClickHandler = () => {
+    alert('Click!');
+  }
+  return <button onClick={onClickHandler}>Hello</button>;
 }
 
 export default HelloComponent;

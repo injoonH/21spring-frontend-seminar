@@ -6,14 +6,17 @@ const DogFetch = () => {
   useEffect(() => {
     fetch('https://dog.ceo/api/breeds/image/random')
       .then(data => data.json())
-      .then(result => {});
-  }, [])
+      .then(result => {
+        if (result.status === 'success')
+          setImageURL(result.message);
+      });
+  }, []);
 
   return (
     <div>
       {imageURL !== "" && <img src={imageURL} alt="Dog" />}
     </div>
-  )
+  );
 }
 
 export default DogFetch;
