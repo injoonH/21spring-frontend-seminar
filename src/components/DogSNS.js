@@ -34,9 +34,9 @@ const DogSNS = () => {
                 setLikes(l => {
                   l[idx] = !l[idx];
                   return l;
-                })
+                });
                 setTotLikes(() => likes[idx] ? totLikes + 1 : totLikes - 1);
-              }}/>
+              }} />
             </div>
           )
         }
