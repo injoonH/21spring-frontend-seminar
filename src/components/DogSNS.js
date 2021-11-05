@@ -10,7 +10,7 @@ const DogSNS = () => {
   const [totLikes, setTotLikes] = useState(0);
 
   useEffect(() => {
-    fetch(`https://dog.ceo/api/breed/${breed}/images/random/${picNum}`)
+    fetch(`http://localhost:3000/dogs/?breed=${breed}&n=${picNum}`)
       .then(res => res.json())
       .then(result => {
         setDogs(result.message);

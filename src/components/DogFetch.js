@@ -4,7 +4,7 @@ const DogFetch = () => {
   const [imageURL, setImageURL] = useState('');
 
   useEffect(() => {
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('http://localhost:3000/dogs/random?n=1')
       .then(data => data.json())
       .then(result => {
         if (result.status === 'success')
@@ -14,7 +14,7 @@ const DogFetch = () => {
 
   return (
     <div>
-      {imageURL !== "" && <img src={imageURL} alt="Dog" />}
+      {imageURL !== "" && <img src={imageURL} alt="Dog" width="600" />}
     </div>
   );
 }

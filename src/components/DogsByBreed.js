@@ -5,9 +5,10 @@ const DogsByBreed = () => {
   const breeds = ['shiba', 'terrier', 'retriever', 'husky', 'chihuahua', 'beagle'];
   const [dogs, setDogs] = useState([]);
   const [curBreed, setCurBreed] = useState(breeds[0]);
+  const picNum = 5;
 
   useEffect(() => {
-    fetch(`https://dog.ceo/api/breed/${curBreed}/images/random/5`)
+    fetch(`http://localhost:3000/dogs/?breed=${curBreed}&n=${picNum}`)
       .then(res => res.json())
       .then(result => {
         setDogs(result.message)
